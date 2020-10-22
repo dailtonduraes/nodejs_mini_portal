@@ -1,0 +1,27 @@
+	<%- include('../includes/topo') %>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="noticia_wrapper">
+					<span class="noticia_autor">Por <%=noticia[0].autor%></span>
+					<a href="#" class="noticia_titulo"><%=noticia[0].titulo%></a>
+					<span class="noticia_data"><%=noticia[0].dt_criacao%></span>
+					<br />
+					<p class="noticia_resumo">
+						<%=noticia[0].texto%>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row ver_mais">
+			<button type="button" class="btn btn-default"><a href="/noticias">Ver todas as notícias</a></button>
+		</div>
+
+	</div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+	</script>
+	</body>
+
+	</html>

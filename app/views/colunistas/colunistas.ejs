@@ -1,0 +1,21 @@
+<%- include('../includes/topo') %>
+	<div class="container">
+		<% for(i=0;i<colunistas.length;i++){ %>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="noticia_wrapper">
+						<span class="noticia_autor"><%=colunistas[i].autor%></span>
+						<a href="/noticia?id=<%=colunistas[i].id%>" class="noticia_titulo"><%=colunistas[i].nome%></a>
+						<br />
+						<p class="noticia_resumo">
+							<%=colunistas[i].curriculo%>
+						</p>
+					</div>
+				</div>
+			</div>
+		<%}%>
+	</div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

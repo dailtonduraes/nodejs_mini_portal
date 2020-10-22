@@ -1,0 +1,47 @@
+	<%- include('../includes/topo') %>	
+	<div class="container">
+		<h1>Adicionar notícia</h1>
+		<%if(validacao.length > 0){%>
+			<div class="row">
+				<div class="col-md-12">
+				<div class="alert alert-danger">
+					<strong>Atenção!</strong>
+					<ul>
+						<% for(var i = 0; i< validacao.length; i++){ %>
+							<li><%=validacao[i].msg%></li>
+						<%}%>	
+					</ul>
+				</div>
+				</div>
+			</div>
+		<%}%>
+		<form action="/noticias/salvar" method="POST">
+			<div class="form-group">
+				<label for="titulo">Titulo</label>
+				<input type="text" name="titulo" id="titulo" value="<%=noticia.titulo%>" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="autor">Autor</label>
+				<input type="text" name="autor" id="autor" value="<%=noticia.autor%>" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="resumo">Resumo</label>
+				<input type="text" name="resumo" id="resumo" value="<%=noticia.resumo%>" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="data_noticia">Data noticia</label>
+				<input type="date" name="data_noticia" id="data_noticia" value="<%=noticia.data_noticia%>"
+					class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="descricao">Descrição</label>
+				<textarea name="texto" id="descricao" cols="30" rows="10"
+					class="form-control"><%=noticia.texto%></textarea>
+			</div>
+			<input type="submit" value="Cadastrar noticia" class="btn btn-primary">
+		</form>
+		</div>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+
+</html>
